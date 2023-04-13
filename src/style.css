@@ -1,0 +1,46 @@
+body {
+			background: #292a2b;
+			color: #fcd000;
+			font-family: monospace;
+			font-size: 24px;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.console {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.output {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			overflow: auto;
+			padding: 0 20px;
+			box-sizing: border-box;
+			margin-bottom: 10px;
+      color: #fff;
+		}
+		.input {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+		.input > span {
+			margin-right: 10px;
+		}
+		.input > input {
+			background: transparent;
+			border: none;
+			color: #0ebeff;
+			font-family: monospace;
+			font-size: 24px;
+			outline: none;
+			caret-color: white;
+			flex-grow: 1;
+		}
