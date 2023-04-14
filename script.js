@@ -40,6 +40,7 @@ const commands = {
       printOutput(`Modèle de l'appareil: ${deviceModel}`);
     }
   },
+
   device: {
     description: 'Affiche des informations sur l\'appareil et la connexion',
     fn: function () {
@@ -117,20 +118,20 @@ const commands = {
       printOutput(`La taille de votre écran est : ${width} x ${height} pixels`);
     }
   },
-  /*
+
   cpu: {
     description: 'Affiche son CPU', color: 'blue',
-    fn: async function() {
+    fn: async function () {
       const cores = navigator.hardwareConcurrency;
-      printOutput('----','rep');
-printOutput(`Nombre de coeurs du CPU : ${cores}`);
- 
+      printOutput('----', 'rep');
+      printOutput(`Nombre de coeurs du CPU : ${cores}`);
+
     }
   },
-  
+
   sys: {
     description: 'Affiche le système d\'exploitation utilisé',
-    fn: async function() {
+    fn: async function () {
       let osName;
       const userAgent = navigator.userAgent;
       if (/(android)/i.test(userAgent)) {
@@ -140,29 +141,29 @@ printOutput(`Nombre de coeurs du CPU : ${cores}`);
       } else {
         osName = navigator.platform;
       }
-      printOutput('----','rep');
+      printOutput('----', 'rep');
       printOutput(`Système d exploitation : ${osName}`);
     }
-},
- 
-  
+  },
+
+
   memory: {
-  description: 'Affiche les mémoires de l\'appareil',
-  fn: function() {
-    const memory = navigator.deviceMemory;
-    const storage = navigator.storage;
-    const storageEstimate = storage && storage.estimate;
-    printOutput('----','rep');
-    printOutput(`Mémoire disponible: ${memory} Go`);
-    
-    if (storageEstimate) {
-      printOutput(`Espace de stockage disponible: ${Math.round(storageEstimate.usage / 1000000000)} Go sur ${Math.round(storageEstimate.quota / 1000000000)} Go`);
-    } else {
-      printOutput('Espace de stockage non disponible.');
+    description: 'Affiche les mémoires de l\'appareil',
+    fn: function () {
+      const memory = navigator.deviceMemory;
+      const storage = navigator.storage;
+      const storageEstimate = storage && storage.estimate;
+      printOutput('----', 'rep');
+      printOutput(`Mémoire disponible: ${memory} Go`);
+
+      if (storageEstimate) {
+        printOutput(`Espace de stockage disponible: ${Math.round(storageEstimate.usage / 1000000000)} Go sur ${Math.round(storageEstimate.quota / 1000000000)} Go`);
+      } else {
+        printOutput('Espace de stockage non disponible.');
+      }
     }
-  }
-},
-  */
+  },
+
   ip: {
     description: 'Affiche l\'adresse IP de l\'utilisateur',
     fn: async function () {
@@ -324,33 +325,33 @@ printOutput(`Nombre de coeurs du CPU : ${cores}`);
       }
     }
   },
-  /*   
-   news: {
-       description: 'Affiche les dernières nouvelles sur un sujet spécifique',
-       fn: async function() {
-           const topic = prompt('De quel sujet souhaitez-vous voir les dernières nouvelles?');
-           try {
-               const response = await fetch(`https://newsapi.org/v2/everything?q=${topic}&apiKey=58e291d01b1d496bbba792839e9e37a7`);
-             //API key == https://newsapi.org/register
-               const data = await response.json();
-               const articles = data.articles;
-               if (articles.length === 0) {
-                 printOutput('----','rep');
-                   printOutput(`Aucune nouvelle trouvée pour le sujet "${topic}"`);
-               } else {
-                 printOutput('----','rep');
-                   printOutput(`Dernières nouvelles sur le sujet "${topic}" :`, 'green');
-                   articles.forEach((article, index) => {
-                       printOutput(`${index+1}. ${article.title} (${article.source.name}): ${article.url}`);
-                   });
-               }
-           } catch (error) {
-             printOutput('----','rep');
-               printOutput('Une erreur est survenue lors de la récupération des nouvelles.');
-           }
-       }
-   },
-   */
+
+  news: {
+    description: 'Affiche les dernières nouvelles sur un sujet spécifique',
+    fn: async function () {
+      const topic = prompt('De quel sujet souhaitez-vous voir les dernières nouvelles?');
+      try {
+        const response = await fetch(`https://newsapi.org/v2/everything?q=${topic}&apiKey=58e291d01b1d496bbba792839e9e37a7`);
+        //API key == https://newsapi.org/register
+        const data = await response.json();
+        const articles = data.articles;
+        if (articles.length === 0) {
+          printOutput('----', 'rep');
+          printOutput(`Aucune nouvelle trouvée pour le sujet "${topic}"`);
+        } else {
+          printOutput('----', 'rep');
+          printOutput(`Dernières nouvelles sur le sujet "${topic}" :`, 'green');
+          articles.forEach((article, index) => {
+            printOutput(`${index + 1}. ${article.title} (${article.source.name}): ${article.url}`);
+          });
+        }
+      } catch (error) {
+        printOutput('----', 'rep');
+        printOutput('Une erreur est survenue lors de la récupération des nouvelles.');
+      }
+    }
+  },
+
 
   meteo: {
     description: 'Affiche la météo dans une ville donnée',
@@ -454,8 +455,8 @@ printOutput(`Nombre de coeurs du CPU : ${cores}`);
 
 
   // Utilisation de la fonction showGif dans la commande zen
-  zen: {
-    description: 'Active le mode zen',
+  light: {
+    description: 'Active le mode light',
     fn: async function () {
       try {
         // Charger le fichier audio
@@ -466,7 +467,7 @@ printOutput(`Nombre de coeurs du CPU : ${cores}`);
         const currentBrightness = window.screen.brightness;
         window.screen.brightness = currentBrightness * 0.3;
 
-        // Afficher le GIF pendant 5 secondes
+        // Afficher le GIF pendant 12 secondes
         //showGif('https://media.giphy.com/media/k8kITi9SAwe9JWbUaH/giphy.gif', 12000);
         document.body.style.backgroundColor = '#2a9d8f';
         document.body.style.color = '#e76f51';
@@ -562,7 +563,8 @@ sendEmail();
       canvas.style.left = '50%';
       canvas.style.transform = 'translate(-50%, -50%)';
       document.body.appendChild(canvas);
-      printOutput('Github/berru-g', 'rep');
+      printOutput('----------------------')
+      printOutput('----Github/berru-g----', '#ff3c41');
       const ctx = canvas.getContext('2d');
       ctx.fillStyle = '#FFFFFF';
       ctx.fillRect(0, 0, 200, 200);
@@ -582,11 +584,11 @@ sendEmail();
       window.screen.brightness = currentBrightness * 0.3;
 
       printOutput('Visit me other skills.');
-
+      printOutput('----------------------')
 
       setTimeout(function () {
         document.body.removeChild(canvas);
-      }, 2000);
+      }, 1000);
     }
   }
 };
@@ -618,5 +620,6 @@ input.addEventListener('keydown', function (event) {
 });
 
 printOutput('Bienvenue sur cette console interactive !');
-printOutput('>')
-printOutput('Suivez les instruction pour avoir vos réponses techniques.');
+printOutput('>>')
+printOutput('Fonctionne sur PC, MAC, IOS, ANDROID.')
+printOutput('Suivez les instruction pour avoir vos réponses techniques concernant votre appareil.');

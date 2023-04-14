@@ -1,7 +1,5 @@
 <!--2 hour with cgpt-->
-<html lang="fr">
 <!--https://berru-g.github.io/berru-g/-->
-
 <head>
 	<meta charset=utf-8>
 	<meta name=viewport content="width=device-width, initial-scale=1">
@@ -19,29 +17,40 @@
 	<meta property=og:url content=https://berru-g.github.io/console-interactive/>
 	<link rel=canonical href=https://berru-g.github.io/console-interactive/>
 	<!-- Google tag (gtag.js) ------------------------------------------------------------>
-	<!--1 hour with cgpt-->
-</head>
-<!--2 hour with cgpt-->
-<!--https://berru-g.github.io/berru-g/-->
+  <!-- Inclure les fichiers CSS et JavaScript de SweetAlert2 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
 
+</head>
 <body>
-	<img src="" class="lofi-gif">
-	  <div class="console">
-	  <h5>Utilitaire système. Help desk basic. More tool in <a href="https://codepen.io/h-lautre">codepen</a></h5>
+ 
+<script>
+// Afficher une fenêtre d'alerte personnalisée
+Swal.fire({
+  title: 'Bienvenue sur cette console interactive !',
+  text: 'Cet outil utilise des fonctionnalités système pour collecter ces informations, ce qui en fait un utilitaire pratique pour les développeurs et les utilisateurs qui souhaitent diagnostiquer des problèmes ou simplement connaître les spécifications de leur appareil.',
+  icon: 'info',
+  confirmButtonText: 'OK'
+});
+</script>
+
+  <img src="" class="lofi-gif" >
+	<div class="console">
+    <h5>Utilitaire système. Help desk basic. More tool in <a href="https://codepen.io/h-lautre">codepen</a></h5>
+
+    <div class="output" id="output"></div>
+		<div class="input">
+			<span>&gt;&gt;</span>
+			
+      <input type="text" id="input" autofocus placeholder="Notez 'list' pour voir la liste des commandes disponibles.">
+
+		</div>
+    <canvas>
+</canvas>
+    
+	</div>
   
-	  <div class="output" id="output"></div>
-		  <div class="input">
-			  <span>&gt;&gt;</span>
-			  
-		<input type="text" id="input" autofocus placeholder="Notez 'list' pour voir la liste des commandes disponibles.">
+	<script src="script.js"></script>
   
-		  </div>
-	  <canvas>
-  </canvas>
-	  
-	  </div>
-	
-	  <script src="script.js"></script>
-	
-	
-  </body>
+  
+</body>
