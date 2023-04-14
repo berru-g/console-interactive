@@ -469,7 +469,8 @@
         // Afficher le GIF pendant 5 secondes
         //showGif('https://media.giphy.com/media/k8kITi9SAwe9JWbUaH/giphy.gif', 12000);
         document.body.style.backgroundColor = '#2a9d8f';
-        printOutput('----','rep');
+        document.body.style.color = '#e76f51';
+        printOutput('----','#f4a261');
         printOutput('Mode zen activé.');
         
       } catch (error) {
