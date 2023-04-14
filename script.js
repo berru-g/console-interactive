@@ -133,14 +133,14 @@
   
   
       mdp: {
-      description: 'Génère des mots de passe aléatoire',
+      description: 'Génère des mots de passe',
       fn: function() {
           startMatrixAnimation();
         function startMatrixAnimation() {
       // Définir la durée de l'animation en millisecondes (10 secondes)
       const duration = 200;
       // Définir la fréquence de mise à jour de l'animation en millisecondes
-      const updateFrequency = 150;
+      const updateFrequency = 180;
   
       // Stocker les caractères possibles dans un tableau
       const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKUVWXYZ1234567890!?§アイウエオカキクケコサシスセソタチツテトナニヌ';
@@ -245,7 +245,7 @@
       }
     }
   },
-    
+ /*   
   news: {
       description: 'Affiche les dernières nouvelles sur un sujet spécifique',
       fn: async function() {
@@ -271,6 +271,7 @@
           }
       }
   },
+  */
     
     meteo: {
       description: 'Affiche la météo dans une ville donnée',
@@ -387,8 +388,8 @@
         window.screen.brightness = currentBrightness * 0.3;
         
         // Afficher le GIF pendant 5 secondes
-        showGif('https://media.giphy.com/media/k8kITi9SAwe9JWbUaH/giphy.gif', 12000);
-        //document.body.style.backgroundColor = '#a2d2ff';
+        //showGif('https://media.giphy.com/media/k8kITi9SAwe9JWbUaH/giphy.gif', 12000);
+        document.body.style.backgroundColor = '#a2d2ff';
         
         printOutput('Mode zen activé.');
         
