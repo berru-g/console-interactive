@@ -38,6 +38,7 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
+	background-color: #1e1d1d;
 }
 
 .input>span {
