@@ -1,3 +1,5 @@
+//import * as fetch from "https://cdn.skypack.dev/fetch@1.1.0";
+//import * as nodeFetch from "https://cdn.skypack.dev/node-fetch@3.3.1";
 
   // Créer une balise img pour le GIF
   const gif = document.createElement('img');
@@ -61,7 +63,7 @@
       }
     },
     
-    performance: {
+    perf: {
       description: 'Affiche les statistiques de performance de l\'appareil',
       fn: function() {
         const cpu = navigator.hardwareConcurrency;
@@ -74,7 +76,7 @@
         const diskSpeed = 0; // TODO: Ajouter la logique pour récupérer la vitesse du disque dur.
     
         printOutput('----','rep');
-        printOutput(`Nombre de cœurs de processeur : ${cpu}`);
+        printOutput(`CPU Nb de cœurs de processeur : ${cpu}`);
         printOutput(`Mémoire disponible: ${memory} Go`);
         printOutput(`Utilisation du processeur : ${cpuUsage}%`);
         printOutput(`Consommation de mémoire : ${memoryUsage}%`);
@@ -89,7 +91,23 @@
       }
     },
     
-    
+    serial: {
+  description: 'Affiche le numéro de série de l\'appareil',
+  fn: function() {
+    printOutput('----','rep');
+    printOutput('Récupération du numéro de série de l\'appareil...');
+
+    fetch('/serialNumber')
+      .then(response => response.text())
+      .then(serialNumber => {
+        printOutput(`Le numéro de série de l'appareil est : ${serialNumber}`);
+      })
+      .catch(error => {
+        printOutput(`Erreur lors de la récupération du numéro de série de l'appareil : ${error}`);
+      });
+  }
+},
+
     size: {
     description: 'Affiche la taille de l\'écran de l\'appareil', color: 'blue',
     fn: function() {
@@ -450,7 +468,7 @@
         
         // Afficher le GIF pendant 5 secondes
         //showGif('https://media.giphy.com/media/k8kITi9SAwe9JWbUaH/giphy.gif', 12000);
-        document.body.style.backgroundColor = '#a2d2ff';
+        document.body.style.backgroundColor = '#2a9d8f';
         printOutput('----','rep');
         printOutput('Mode zen activé.');
         
@@ -588,7 +606,7 @@
     if (commands[inputValue]) {
       commands[inputValue].fn();
     } else {
-      printOutput('Commande inconnue. Tapez "list" pour une liste des commandes disponibles.');
+      printOutput('Commande inconnue. Notez "list" pour une liste des commandes disponibles.');
     }
   }
   
@@ -600,5 +618,5 @@
   
   printOutput('Bienvenue sur cette console interactive !');
   printOutput('>')
-  printOutput('Tapez "list" pour la liste des commandes disponibles.');
+  printOutput('Suivez les instruction pour avoir vos réponses techniques.');
   

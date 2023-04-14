@@ -7,7 +7,7 @@ body {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	position: absolute;
+	position: relative;
 }
 
 .console {
@@ -15,10 +15,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 20px;
+	padding: 10px;
 	box-sizing: border-box;
 	z-index: 20;
-	top:0;
 }
 
 .output {
@@ -39,6 +38,7 @@ body {
 	align-items: center;
 	margin-bottom: 10px;
 	background-color: #f6f3f328;
+	width: 100%;
 }
 
 .input>span {
@@ -87,7 +87,7 @@ a:hover {
 
 .lofi-gif {
 	position: absolute;
-	margin-top: 0px;
+	margin-top: -100px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
