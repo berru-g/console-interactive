@@ -3,7 +3,7 @@ body {
 	/*#292a2b*/
 	color: #fcd000;
 	font-family: monospace;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -49,7 +49,7 @@ body {
 	border: none;
 	color: #0ebeff;
 	font-family: monospace;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	outline: none;
 	caret-color: white;
 	flex-grow: 1;
@@ -71,7 +71,7 @@ canvas {
 h5 {
 	text-align: left;
 	color: grey;
-	font-size: 16px;
+	font-size: 0.8rem;
 	padding: 0vh 3vh;
 }
 

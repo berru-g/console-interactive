@@ -34,6 +34,7 @@
       fn: function() {
         const userAgent = navigator.userAgent;
         const deviceModel = userAgent.match(/\(([^)]+)\)/)[1];
+        printOutput('----','rep');
         printOutput(`Modèle de l'appareil: ${deviceModel}`);
       }
     },
@@ -44,12 +45,13 @@
         const language = navigator.language;
         const isOnline = navigator.onLine;
         const connection = navigator.connection;
-        
+        printOutput('----','rep');       
         printOutput(`Plateforme : ${platform}`);
         printOutput(`Langue : ${language}`);
         printOutput(`Connecté à Internet : ${isOnline}`);
         
         if (connection) {
+          printOutput('----','rep');
           printOutput(`Type de connexion : ${connection.effectiveType}`);
           printOutput(`Vitesse de téléchargement : ${connection.downlink} Mbits/s`);
           printOutput(`Latence de la connexion : ${connection.rtt} ms`);
@@ -449,7 +451,7 @@
         // Afficher le GIF pendant 5 secondes
         //showGif('https://media.giphy.com/media/k8kITi9SAwe9JWbUaH/giphy.gif', 12000);
         document.body.style.backgroundColor = '#a2d2ff';
-        
+        printOutput('----','rep');
         printOutput('Mode zen activé.');
         
       } catch (error) {
