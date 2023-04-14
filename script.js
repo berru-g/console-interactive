@@ -37,6 +37,56 @@
         printOutput(`Modèle de l'appareil: ${deviceModel}`);
       }
     },
+    device: {
+      description: 'Affiche des informations sur l\'appareil et la connexion',
+      fn: function() {
+        const platform = navigator.platform;
+        const language = navigator.language;
+        const isOnline = navigator.onLine;
+        const connection = navigator.connection;
+        
+        printOutput(`Plateforme : ${platform}`);
+        printOutput(`Langue : ${language}`);
+        printOutput(`Connecté à Internet : ${isOnline}`);
+        
+        if (connection) {
+          printOutput(`Type de connexion : ${connection.effectiveType}`);
+          printOutput(`Vitesse de téléchargement : ${connection.downlink} Mbits/s`);
+          printOutput(`Latence de la connexion : ${connection.rtt} ms`);
+        } else {
+          printOutput('Informations sur la connexion non disponibles');
+        }
+      }
+    },
+    
+    performance: {
+      description: 'Affiche les statistiques de performance de l\'appareil',
+      fn: function() {
+        const cpu = navigator.hardwareConcurrency;
+        const memory = navigator.deviceMemory;
+        const storage = navigator.storage;
+        const storageEstimate = storage && storage.estimate;
+    
+        const cpuUsage = 0; // TODO: Ajouter la logique pour récupérer l'utilisation du processeur.
+        const memoryUsage = 0; // TODO: Ajouter la logique pour récupérer la consommation de mémoire.
+        const diskSpeed = 0; // TODO: Ajouter la logique pour récupérer la vitesse du disque dur.
+    
+        printOutput('----','rep');
+        printOutput(`Nombre de cœurs de processeur : ${cpu}`);
+        printOutput(`Mémoire disponible: ${memory} Go`);
+        printOutput(`Utilisation du processeur : ${cpuUsage}%`);
+        printOutput(`Consommation de mémoire : ${memoryUsage}%`);
+    
+        if (storageEstimate) {
+          printOutput(`Espace de stockage disponible: ${Math.round(storageEstimate.usage / 1000000000)} Go sur ${Math.round(storageEstimate.quota / 1000000000)} Go`);
+        } else {
+          printOutput('Espace de stockage non disponible.');
+        }
+    
+        printOutput(`Vitesse du disque dur : ${diskSpeed} Mo/s`);
+      }
+    },
+    
     
     size: {
     description: 'Affiche la taille de l\'écran de l\'appareil', color: 'blue',
@@ -47,7 +97,7 @@
       printOutput(`La taille de votre écran est : ${width} x ${height} pixels`);
     }
   },
-    
+    /*
     cpu: {
       description: 'Affiche son CPU', color: 'blue',
       fn: async function() {
@@ -92,7 +142,7 @@
       }
     }
   },
-    
+    */
     ip: {
     description: 'Affiche l\'adresse IP de l\'utilisateur',
     fn: async function() {
