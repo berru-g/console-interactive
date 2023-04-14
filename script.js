@@ -28,6 +28,15 @@
         }
       }
     },
+
+    model: {
+      description: 'Affiche le nom du modèle de l\'appareil',
+      fn: function() {
+        const userAgent = navigator.userAgent;
+        const deviceModel = userAgent.match(/\(([^)]+)\)/)[1];
+        printOutput(`Modèle de l'appareil: ${deviceModel}`);
+      }
+    },
     
     size: {
     description: 'Affiche la taille de l\'écran de l\'appareil', color: 'blue',
