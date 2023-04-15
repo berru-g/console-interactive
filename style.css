@@ -1,26 +1,23 @@
 body {
-	background: #111111;
-	/*#292a2b*/
+	background: #111111; /*#292a2b*/
 	color: #fcd000;
 	font-family: monospace;
 	font-size: 1rem;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	position: relative;
+position: relative;
 }
-
 .console {
 	height: 50%;
-	width: 100%;
+width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 10px;
 	box-sizing: border-box;
-	z-index: 20;
+z-index:20;
 }
-
 .output {
 	height: 100%;
 	display: flex;
@@ -30,23 +27,20 @@ body {
 	padding: 0 20px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
-	color: #fefae0;
-	z-index: 20;
+color: #fefae0;
+z-index: 20;
 }
-
 .input {
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
-	background-color: #f6f3f328;
-	width: 100%;
+background-color: #f6f3f328;
+width: 100%;
 }
-
-.input>span {
+.input > span {
 	margin-right: 10px;
 }
-
-.input>input {
+.input > input {
 	background: transparent;
 	border: none;
 	color: #ff3c41;
@@ -56,41 +50,39 @@ body {
 	caret-color: white;
 	flex-grow: 1;
 }
-
 canvas {
-	width: 100%;
+width: 100%;
 }
-
 .rep {
-	color: green;
+color: green;
 }
-
 .error {
-	color: red;
+color: red;
 }
-
 h5 {
-	text-align: left;
-	color: #0ebeff;
-	font-size: 1rem;
-	padding: 0vh 3vh;
+text-align: left;
+color: #0ebeff;
+font-size: 1rem;
+padding: 0vh 3vh;
 }
-
 a {
-	color: #0ebeff;
-	text-decoration: none;
+color: #0ebeff;
+text-decoration: none;
 }
-
-a:hover {
-	color: grey;
-}
+a:hover{color:grey;}
 
 .lofi-gif {
-	position: absolute;
-	margin-top: -100px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: -10;
+position: absolute;
+margin-top: -100px;
+left: 0px;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -10;
+}
+
+#output p {
+height: auto; /* ou une hauteur en pixels plus petite */
+margin: 0; /* pour enlever les marges */
+padding: 0; /* pour enlever les paddings */
 }

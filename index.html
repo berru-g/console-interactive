@@ -20,17 +20,18 @@
   <!-- Inclure les fichiers CSS et JavaScript de SweetAlert2 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
-
 </head>
 <body>
- 
 <script>
 // Afficher une fenêtre d'alerte personnalisée
 Swal.fire({
   title: 'Bienvenue sur cette console interactive !',
   text: 'Cet outil utilise des fonctionnalités système pour collecter ces informations, ce qui en fait un utilitaire pratique pour les développeurs et les utilisateurs qui souhaitent diagnostiquer des problèmes ou simplement connaître les spécifications de leur appareil.',
-  icon: 'info',
-  confirmButtonText: 'OK'
+  icon: 'success', //icon: 'path/to/custom/icon.png',
+    confirmButtonText: 'OK',
+  customClass: {
+    confirmButton: 'btn btn-primary',
+  }
 });
 </script>
 
@@ -40,7 +41,7 @@ Swal.fire({
 
     <div class="output" id="output"></div>
 		<div class="input">
-			<span>&gt;&gt;</span>
+			<span>&gt;&gt;&gt;</span>
 			
       <input type="text" id="input" autofocus placeholder="Notez 'list' pour voir la liste des commandes disponibles.">
 
