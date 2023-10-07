@@ -18,4 +18,5 @@
    -  clear: Efface la console
    -  credit: Signature 300
 
-   <h3>Teste moi dans<a href="https://codepen.io/h-lautre/full/WNareYJ"> codepen</a></h3>
+   <h3>Tester la premiere version dans<a href="https://codepen.io/h-lautre/full/WNareYJ"> codepen</a></h3>
+   <h3>Tester la deuxieme version dans<a href="https://codepen.io/h-lautre/full/bGOQxjK"> codepen</a></h3>

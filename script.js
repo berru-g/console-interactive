@@ -1,6 +1,6 @@
 //import * as fetch from "https://cdn.skypack.dev/fetch@1.1.0";
 //import * as nodeFetch from "https://cdn.skypack.dev/node-fetch@3.3.1";
-
+//berru 2022
   // Créer une balise img pour le GIF
   const gif = document.createElement('img');
   const output = document.getElementById('output');
@@ -27,8 +27,127 @@
           }
         }
       }
-    },
+    }, 
+//serie teste
+    /*
+    battery: {
+  description: 'Affiche l\'état de la batterie de l\'ordinateur',
+  fn: async function() {
+    try {
+      printOutput('\n----', '#0ebeff');
+      printOutput('Récupération de l\'état de la batterie...\n');
 
+      const batteryResponse = await fetch('/battery');
+      const batteryStatus = await batteryResponse.json();
+      printOutput(`État de la batterie : ${batteryStatus.status}`);
+      printOutput(`Niveau de charge : ${batteryStatus.level * 100}%`);
+      printOutput(`Temps restant estimé : ${batteryStatus.timeRemaining}`);
+
+    } catch (error) {
+      printOutput(`Erreur lors de la récupération de l'état de la batterie : ${error}`);
+    }
+  }
+},
+
+    repair: {
+  description: 'Affiche des informations utiles pour réparer votre ordinateur',
+  fn: async function() {
+    try {
+      printOutput('\n----', '#0ebeff');
+      printOutput('Récupération des informations utiles pour la réparation de votre ordinateur...\n');
+
+      const systemInfoResponse = await fetch('/systemInfo');
+      const systemInfo = await systemInfoResponse.json();
+      printOutput(`Système d'exploitation : ${systemInfo.os}`);
+      printOutput(`Nom de l'ordinateur : ${systemInfo.hostname}`);
+
+      const diskUsageResponse = await fetch('/diskUsage');
+      const diskUsage = await diskUsageResponse.json();
+      printOutput(`Espace libre sur le disque C: ${diskUsage.C.free} / ${diskUsage.C.total}`);
+      printOutput(`Espace libre sur le disque D: ${diskUsage.D.free} / ${diskUsage.D.total}`);
+
+      const networkInfoResponse = await fetch('/networkInfo');
+      const networkInfo = await networkInfoResponse.json();
+      printOutput(`Adresse IP : ${networkInfo.ip}`);
+      printOutput(`Masque de sous-réseau : ${networkInfo.subnet}`);
+      printOutput(`Passerelle par défaut : ${networkInfo.gateway}`);
+
+    } catch (error) {
+      printOutput(`Erreur lors de la récupération des informations : ${error}`);
+    }
+  }
+},
+    process: {
+  description: 'Affiche la liste des processus en cours d\'exécution sur l\'ordinateur',
+  fn: async function() {
+    try {
+      printOutput('\n----', '#0ebeff');
+      printOutput('Récupération de la liste des processus...\n');
+
+      const processesResponse = await fetch('/processes');
+      const processesList = await processesResponse.json();
+      processesList.forEach(process => {
+        printOutput(`${process.name} (ID ${process.pid}) : ${process.cpu}% CPU, ${process.memory} mémoire`);
+      });
+
+    } catch (error) {
+      printOutput(`Erreur lors de la récupération de la liste des processus : ${error}`);
+    }
+  }
+},
+
+    updates: {
+  description: 'Affiche la liste des mises à jour disponibles pour les logiciels installés sur l\'ordinateur',
+  fn: async function() {
+    try {
+      printOutput('\n----', '#0ebeff');
+      printOutput('Recherche des mises à jour disponibles...\n');
+
+      const updatesResponse = await fetch('/updates');
+      const updatesList = await updatesResponse.json();
+      if (updatesList.length === 0) {
+        printOutput('Aucune mise à jour disponible pour les logiciels installés.');
+      } else {
+        updatesList.forEach(update => {
+          printOutput(`${update.name} : version actuelle ${update.currentVersion}, dernière version ${update.latestVersion}`);
+        });
+      }
+
+    } catch (error) {
+      printOutput(`Erreur lors de la recherche des mises à jour disponibles : ${error}`);
+    }
+  }
+},
+/*
+repair: {
+  description: 'Affiche des informations utiles pour réparer votre ordinateur',
+  fn: async function() {
+    try {
+      printOutput('\n----', '#0ebeff');
+      printOutput('Récupération des informations utiles pour la réparation de votre ordinateur...\n');
+
+      const systemInfoResponse = await fetch('/systemInfo');
+      const systemInfo = await systemInfoResponse.json();
+      printOutput(`Système d'exploitation : ${systemInfo.os}`);
+      printOutput(`Nom de l'ordinateur : ${systemInfo.hostname}`);
+
+      const diskUsageResponse = await fetch('/diskUsage');
+      const diskUsage = await diskUsageResponse.json();
+      printOutput(`Espace libre sur le disque C: ${diskUsage.C.free} / ${diskUsage.C.total}`);
+      printOutput(`Espace libre sur le disque D: ${diskUsage.D.free} / ${diskUsage.D.total}`);
+
+      const networkInfoResponse = await fetch('/networkInfo');
+      const networkInfo = await networkInfoResponse.json();
+      printOutput(`Adresse IP : ${networkInfo.ip}`);
+      printOutput(`Masque de sous-réseau : ${networkInfo.subnet}`);
+      printOutput(`Passerelle par défaut : ${networkInfo.gateway}`);
+
+    } catch (error) {
+      printOutput(`Erreur lors de la récupération des informations : ${error}`);
+    }
+  }
+},
+*/
     model: {
       description: 'Affiche le nom du modèle de l\'appareil',
       fn: function() {
@@ -74,7 +193,7 @@
         const memoryUsage = 0; // TODO: Ajouter la logique pour récupérer la consommation de mémoire.
         const diskSpeed = 0; // TODO: Ajouter la logique pour récupérer la vitesse du disque dur.
     
-        printOutput('----','#0ebeff');
+        printOutput('----','#808080');
         printOutput(`CPU Nb de cœurs de processeur : ${cpu}`);
         printOutput(`Mémoire disponible: ${memory} Go`);
         printOutput(`Utilisation du processeur : ${cpuUsage}%`);
@@ -89,8 +208,8 @@
         printOutput(`Vitesse du disque dur : ${diskSpeed} Mo/s`);
       }
     },
-    
-    serial: {
+   /* 
+   serial: {
   description: 'Affiche le numéro de série de l\'appareil',
   fn: function() {
     printOutput('----','#0ebeff');
@@ -105,7 +224,22 @@
         printOutput(`Erreur lors de la récupération du numéro de série de l'appareil : ${error}`);
       });
   }
+},*/
+    serial: {
+  description: 'Affiche le numéro de série de l\'appareil',
+  fn: async function() {
+    try {
+      printOutput('\n----', '#0ebeff');
+      printOutput('Récupération du numéro de série de l\'appareil...\n');
+      const response = await fetch('/serialNumber');
+      const serialNumber = await response.text();
+      printOutput(`Le numéro de série de l'appareil est : ${serialNumber}`);
+    } catch (error) {
+      printOutput(`Erreur lors de la récupération du numéro de série de l'appareil : ${error}`);
+    }
+  }
 },
+
 
     size: {
     description: 'Affiche la taille de l\'écran de l\'appareil', 
@@ -121,7 +255,7 @@
       description: 'Affiche son CPU', 
       fn: async function() {
         const cores = navigator.hardwareConcurrency;
-        printOutput('----','red');
+        printOutput('----','#0ebeff');
   printOutput(`Nombre de coeurs du CPU : ${cores}`);
   
       }
@@ -292,7 +426,7 @@
       }
     }
   },
-    */
+    
   btc: {
     description: 'Affiche le cours actuel de Bitcoin en EUR',color: 'grey',
     fn: async function() {
@@ -329,7 +463,7 @@
       fn: async function() {
           const topic = prompt('De quel sujet souhaitez-vous voir les dernières nouvelles?');
           try {
-              const response = await fetch(`https://newsapi.org/v2/everything?q=${topic}&apiKey=58e291d01b1d496bbba792839e9e37a7`);
+              const response = await fetch(`https://newsapi.org/v2/everything?q=${topic}&apiKey=`);
             //API key == https://newsapi.org/register
               const data = await response.json();
               const articles = data.articles;
@@ -355,7 +489,7 @@
       description: 'Affiche la météo dans une ville donnée', color: 'grey',
       fn: async function() {
           const ville = prompt('Entrez le nom de la ville :');
-          const apiKey = '50085979d51d9dcb97879256118a8c17';
+          const apiKey = 'APIKEY';
           const url = `https://api.openweathermap.org/data/2.5/weather?q=${ville}&appid=${apiKey}&units=metric`;
           try {
               const response = await fetch(url);
@@ -471,6 +605,14 @@
         document.body.style.color = '#e76f51';
         printOutput('----','#f4a261');
         printOutput('Mode zen activé.');
+        Swal.fire({
+  toast: true,
+  position: 'top-end',
+  icon: 'success',
+  title: 'Mode light Activé',
+  showConfirmButton: false,
+  timer: 3000
+});
         
       } catch (error) {
         printOutput('Une erreur est survenue lors de l\'activation du mode zen.');
@@ -562,7 +704,7 @@
         canvas.style.transform = 'translate(-50%, -50%)';
         document.body.appendChild(canvas);
         printOutput('----------------------')
-        printOutput('----Github/berru-g----','#ff3c41');
+        printOutput('----Github/berru-g----','green');
         const ctx = canvas.getContext('2d');
         ctx.fillStyle = '#FFFFFF';
         ctx.fillRect(0, 0, 200, 200);
@@ -615,7 +757,7 @@
     if (commands[inputValue]) {
       commands[inputValue].fn();
     } else {
-      printOutput('Commande inconnue. Notez "list" pour une liste des commandes disponibles.');
+      printOutput('Notez "list" pour obtenir la liste des commandes disponibles.');
     }
   }
   
@@ -627,6 +769,6 @@
   
   printOutput('Bienvenue sur cette console interactive !');
   printOutput('>>')
-  printOutput('Fonctionne sur PC, MAC, IOS, ANDROID.')
-  printOutput('Suivez les instruction pour avoir vos réponses techniques concernant votre appareil.');
+  printOutput('')
+  printOutput('Notez "list" pour obtenir la liste des commandes disponibles et découvrez les caracteristiques de votre appareil','#0ebeff');
   
