@@ -18,5 +18,8 @@
    -  clear: Efface la console
    -  credit: Signature 300
 
+<img width="569" alt="terminalhelpdesk" src="https://github.com/berru-g/console-interactive/assets/61543927/09ec3ab6-466c-488b-84b8-e2b910e4e810">
+
+
    <h3>Tester la premiere version dans<a href="https://codepen.io/h-lautre/full/WNareYJ"> codepen</a></h3>
    <h3>Tester la deuxieme version dans<a href="https://codepen.io/h-lautre/full/bGOQxjK"> codepen</a></h3>
