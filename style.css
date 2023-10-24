@@ -24,6 +24,18 @@ body {
   border-radius: 8px;
   overflow: auto;
   padding: 10px;
+  animation-name: bounce-in-top;
+  animation-duration: 2s;
+}
+@keyframes bounce-in-top {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .input {

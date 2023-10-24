@@ -1,6 +1,19 @@
+//import figlet from "https://esm.sh/figlet";
 //import * as fetch from "https://cdn.skypack.dev/fetch@1.1.0";
 //import * as nodeFetch from "https://cdn.skypack.dev/node-fetch@3.3.1";
-//berru 2022
+//berru 2022 
+const figlet = require('figlet');
+
+function printOutput(text, message) {
+  const art = figlet.textSync(text, {
+    font: 'Standard', 
+  });
+  console.log(message);
+  console.log(art);
+}
+
+printOutput('Bienvenue', 'Texte en art ASCII :');
+
   // Créer une balise img pour le GIF
   const gif = document.createElement('img');
   const output = document.getElementById('output');
@@ -13,7 +26,7 @@
       gif.src = '';
     }, duration);
   }
-  
+
   const commands = {
     list: {
       description: 'Affiche une liste des commandes disponibles',
@@ -522,7 +535,7 @@ repair: {
       }
   },
   
-    apikeymeteo58e291d01b1d496bbba792839e9e37a7
+    apikeymeteo
     dialog: {
       description: 'Ouvre un dialogue de test',
       fn: function() {
@@ -768,7 +781,18 @@ repair: {
   });
   
   printOutput('Bienvenue sur cette console interactive !');
-  printOutput('>>')
-  printOutput('')
+
   printOutput('Notez "list" pour obtenir la liste des commandes disponibles et découvrez les caracteristiques de votre appareil','#0ebeff');
   
+/* function npm
+  function executeCommand(command) {
+    if (command === 'npm list') {
+    displayOutput('+-- peace@4.2.0 ');
+    displayOutput('+-- love@2.4.0 ');
+    displayOutput('`-- unity@1.1.1 ');
+  }
+    else {
+    displayOutput('Mauvaise réponse.');
+  }
+}
+*/

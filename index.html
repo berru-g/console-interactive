@@ -1,4 +1,6 @@
 <!--first version is here https://codepen.io/h-lautre/pen/KKGgJpK-->
+<!--first version is here https://codepen.io/h-lautre/pen/KKGgJpK-->
+<html>
 <head>
 	<meta charset=utf-8>
 	<meta name=viewport content="width=device-width, initial-scale=1">
@@ -6,22 +8,23 @@
 	<link rel="shortcut icon" href="https://www.etevat.fi/hs-fs/hubfs/Tuki/helpdesk_servicedesk_itms_ittuki.png?width=645&name=helpdesk_servicedesk_itms_ittuki.png" />
 	<meta name=title content="help desk tool">
 	<meta name=description
-	  content="Outils multifonctions, affiche l'adresse IP, CPU, memory, wifi de l'utilisateur. Joue avec les API de cours des crypto, la météo et les news. Mode zen, mode matrix, cette mini console conçu en 2h avec chatgpt. "/>
+		content="Outils multifonctions, affiche l'adresse IP, CPU, memory, wifi de l'utilisateur. Joue avec les API de cours des crypto, la météo et les news. Mode zen, mode matrix, cette mini console conçu en 2h avec chatgpt. " />
 	<meta name=author content>
-	<meta name=keywords
-	  content="help desk, quel est mon adresse IP?, quel est mon CPU?, quel est mon model de pc?, combien j'ai de memoire?, console android, consoletool, les détails de votre portable, toolinfo"/>
+	<meta name=keywords content="help desk, quel est mon adresse IP?, quel est mon CPU?, quel est mon model de pc?, combien j'ai de memoire?, console android, consoletool, les détails de votre portable, toolinfo" />
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
-  
-	<meta property=og:url content=https://berru-g.github.io/console-interactive/>
-	<link rel=canonical href=https://berru-g.github.io/console-interactive/>
+	<script type="text/javascript" src="cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+	<script type="text/javascript" src="figlet.js"></script>
+	<meta property=og:url content=https://berru-g.github.io/console-interactive />
+	<link rel=canonical href=https://berru-g.github.io/console-interactive />
 	<!-- Google tag (gtag.js) ------------------------------------------------------------>
-  <!-- Inclure les fichiers CSS et JavaScript de SweetAlert2 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+	<!-- Inclure les fichiers CSS et JavaScript de SweetAlert2 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
 </head>
+
 <body>
-<!--<script>
+	<!--<script>
 // Afficher une fenêtre d'alerte personnalisée
 Swal.fire({
   title: 'Bienvenue sur cette console interactive !',
@@ -34,23 +37,23 @@ Swal.fire({
 });
 </script>-->
 
-  <img src="" class="lofi-gif" >
+	<img src="" class="lofi-gif">
 	<div class="console">
-    <h5>Utilitaire système. Outils Help desk basic. More tool in <a href="https://codepen.io/h-lautre">codepen</a></h5>
+		<h5>Utilitaire système. Outils Help desk basic. More tool in <a href="https://codepen.io/h-lautre">codepen</a>
+		</h5>
 
-    <div class="output" id="output"></div>
+		<div class="output" id="output"></div>
 		<div class="input">
 			<span>C:Users\device:</span>
-			
-      <input type="text" id="input" autofocus placeholder="...">
+
+			<input type="text" id="input" autofocus placeholder="...">
 
 		</div>
-    <canvas>
-</canvas>
-    
+		<canvas>
+		</canvas>
+
 	</div>
-  
-	<script src="script.js"></script>
-  
-  
+
+
 </body>
+</html>
