@@ -2,18 +2,17 @@
 //import * as fetch from "https://cdn.skypack.dev/fetch@1.1.0";
 //import * as nodeFetch from "https://cdn.skypack.dev/node-fetch@3.3.1";
 //berru 2022 
+/*
 const figlet = require('figlet');
-
-function printOutput(text, message) {
-  const art = figlet.textSync(text, {
-    font: 'Standard', 
-  });
-  console.log(message);
-  console.log(art);
-}
-
-printOutput('Bienvenue', 'Texte en art ASCII :');
-
+const font = 'Slant';
+const text = 'U-S tool';
+figlet(text, { font }, (err, data) => {
+  if (err) {
+    console.log('Erreur :', err);
+  } else {
+    console.log(data);
+  }
+});*/
   // Créer une balise img pour le GIF
   const gif = document.createElement('img');
   const output = document.getElementById('output');
