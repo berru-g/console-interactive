@@ -3,10 +3,10 @@ body {
   width: 100%;
   height: auto;
   font-family: monospace;
-  background-image: url('https://www.fond-ecran-hd.net/Public/uploads/2021-07-03/thumbs-1/windows10.png');
+  background-image: url('https://www.simplydesk.fr/wp-content/uploads/2022/12/13184993_5138226-1024x1024.jpg');
   repeat: no-repeat;
-  margin: 0;
-  padding: 20px;
+  margin: auto;
+  padding: 10px;
   display: block;
   justify-content: center;
   align-items: center;
@@ -17,8 +17,8 @@ body {
   display: block;
   width: 80%;
   height: 80vh;
-  background-color: #131417;
-  opacity: 0.95;
+  background-color: #1e1f26;
+  opacity: 1;
   border: 2px solid grey;
   border-top: 24px solid grey;
   border-radius: 8px;
@@ -42,11 +42,12 @@ body {
   width: 100%;
   outline: none;
   border: none;
-  background-color: #1a1a1a;
+  background-color: #1e1f26;
   color: white;
 }
 .output {
-  font-family: "Inconsolata";
+  font-family: monospace, sans-serif;
+  color: #fff;
 }
 		.input > span {
 			margin-right: 10px;
@@ -72,22 +73,23 @@ canvas {
 }
 h5 {
   text-align: left;
-  color: #0ebeff;
+  color: #ff3c41;
   font-size: 0.8rem;
-  padding: 0vh 3vh;
+  padding: 0;
 }
 a {
-  color: #0ebeff;
+  color: #fcd000;
   text-decoration: none;
 }
-a:hover{color:grey;}
-
-
+a:hover {
+  color:#0ebeff;
+  text-decoration: #fcd000 wavy underline;
+}
 
 #output p {
-  height: auto; /* ou une hauteur en pixels plus petite */
-  margin: 0; /* pour enlever les marges */
-  padding: 0; /* pour enlever les paddings */
+  height: auto; 
+  margin: 0; 
+  padding: 0; 
 }
 #output description {
   color:grey;
